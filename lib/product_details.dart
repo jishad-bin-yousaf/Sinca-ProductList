@@ -8,53 +8,75 @@ class ProductDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: Colors.white,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              SizedBox(
-                height: 3,
-              ),
-              Column(
-                children: [
-                  Text(
-                    "UID",
-                    style: TextStyle(color: Colors.grey[600], fontSize: 9, letterSpacing: 1),
-                  ),
-                  Text(
-                    uid,
-                    style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
-                  ),
-                  SizedBox(
-                    height: 10,
-                  )
-                ],
-              ),
-              Column(
-                children: [
-                  Text(
-                    "Item Name",
-                    style: TextStyle(color: Colors.grey[600], fontSize: 9, letterSpacing: 1),
-                  ),
-                  Text(item_Name),
-                  SizedBox(
-                    height: 10,
-                  )
-                ],
-              )
-            ],
-          ),
-          Expanded(
-              child: Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [Text("Price 5")],
-          )),
-        ],
+    return SizedBox(
+      height: 60,
+      child: Card(
+        margin: EdgeInsets.symmetric(vertical: 5),
+        color: Color.fromARGB(255, 255, 255, 255),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 3,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "UID",
+                      style: TextStyle(color: Colors.grey[600], fontSize: 9, letterSpacing: 1),
+                    ),
+                    SizedBox(
+                      width: 25,
+                    ),
+                    Text(
+                      "Item Name",
+                      style: TextStyle(
+                        color: Colors.grey[600],
+                        fontSize: 9,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      uid,
+                      style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      width: 25,
+                    ),
+                    Text(
+                      item_Name,
+                      style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                )
+              ],
+            ),
+            Expanded(
+                child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Wrap(
+                  children: [
+                    Column(
+                      children: [
+                        // for trailing area.....
+                      ],
+                    )
+                  ],
+                )
+              ],
+            )),
+          ],
+        ),
       ),
     );
   }

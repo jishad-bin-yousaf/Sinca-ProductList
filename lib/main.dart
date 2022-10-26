@@ -16,7 +16,7 @@ class Products extends StatelessWidget {
         child: Card(
           elevation: 5,
           child: Container(
-            // height: MediaQuery.of(context).size.height * 0.95,
+            height: MediaQuery.of(context).size.height * 0.95,
             width: MediaQuery.of(context).size.width,
             color: Colors.grey[700],
             child: Padding(
@@ -40,6 +40,14 @@ class Products extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(5.0),
                         child: ProductDetails(item_Name: "dairyMilk", uid: "1395"),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: ProductDetails(item_Name: "Kitkat", uid: "8695"),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: ProductDetails(item_Name: "Galexy", uid: "5345"),
                       ),
                     ],
                   ),
