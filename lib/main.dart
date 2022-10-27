@@ -38,7 +38,7 @@ class Products extends StatelessWidget {
                       SizedBox(
                         height: MediaQuery.of(context).size.height * 0.8,
                         child: ListView.separated(
-                          itemCount: 10,
+                          itemCount: 1,
                           itemBuilder: (BuildContext context, int index) {
                             return ProductDetails(
                               uid: '75834',
