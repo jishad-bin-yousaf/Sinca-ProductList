@@ -23,32 +23,36 @@ class Products extends StatelessWidget {
               padding: const EdgeInsets.all(5.0),
               child: Card(
                 color: Colors.grey[800],
-                child: SingleChildScrollView(
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.all(5.0),
-                        child: Text(
-                          'Parts/Materials',
-                          style: TextStyle(
-                            color: Colors.grey[500],
-                            fontWeight: FontWeight.w500,
-                          ),
+                      Text(
+                        'Parts/Materials',
+                        style: TextStyle(
+                          color: Colors.grey[500],
+                          fontWeight: FontWeight.w500,
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(5.0),
-                        child: ProductDetails(item_Name: "dairyMilk", uid: "1395"),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(5.0),
-                        child: ProductDetails(item_Name: "Kitkat", uid: "8695"),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(5.0),
-                        child: ProductDetails(item_Name: "Galexy", uid: "5345"),
-                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.8,
+                        child: ListView.separated(
+                          itemCount: 10,
+                          itemBuilder: (BuildContext context, int index) {
+                            return ProductDetails(
+                              uid: '75834',
+                              item_Name: 'Item Name',
+                              price: '100',
+                            );
+                          },
+                          separatorBuilder: (BuildContext context, int index) {
+                            return SizedBox(
+                              height: 5,
+                            );
+                          },
+                        ),
+                      )
                     ],
                   ),
                 ),
